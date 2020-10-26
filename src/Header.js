@@ -1,14 +1,21 @@
-import { getSrc } from './util/getSrc';
+import React from "react";
+import { getSrc } from "./util/getSrc";
 
-const EMOJI1_SRC = getSrc('😈');
-const EMOJI2_SRC = getSrc('👿');
+const SMILE_CAT_SRC = getSrc("😸");
+const POUTING_CAT_SRC = getSrc("😾");
+const MONEY_GANG_SRC = getSrc("🤑");
 
 export const Header = () => {
-  <header>
-    <h1>
-      <img src={EMOJI1_SRC} width={32} height={32} />
-      Emoji Search
-      <img src={EMOJI1_SRC} width={32} height={32} />
-    </h1>
-  </header>
+  return (
+    <header className="text-center">
+      <h1>
+        <img src={SMILE_CAT_SRC} width="32" height="32" />
+        Emoji Search
+        <img src={POUTING_CAT_SRC} width="32" height="32" />
+      </h1>
+      <div>
+        <img src={MONEY_GANG_SRC} width="32" height="32" />
+      </div>
+    </header>
+  );
 };
